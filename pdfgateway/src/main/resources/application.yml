@@ -1,0 +1,16 @@
+server:
+  port: 8090
+
+zuul:
+  routes:
+    pdf:
+      path: /pdf/**
+      url: http://localhost:8080
+
+pdf:
+  ribbon:
+    listOfServers: http://localhost:8080
+
+ribbon:
+  eureka:
+    enabled: false
